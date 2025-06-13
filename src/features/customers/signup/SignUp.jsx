@@ -94,7 +94,7 @@ export default function SignUp() {
     function () {
       const closeWithKey = (e) =>
         e.key.toLowerCase().includes("esc") && closeEffect();
-      window.addEventListener("keydown", close);
+      window.addEventListener("keydown", closeWithKey);
       return () => window.removeEventListener("keydown", closeWithKey);
     },
     [closeEffect]

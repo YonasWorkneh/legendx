@@ -52,11 +52,11 @@ function Filter({ disabled, filterOpened, setFilterOpened, setSortOpened }) {
         !e.target.closest(".filter") && setFilterOpened(false);
       const handleEscClose = (e) =>
         e.key.toLowerCase().includes("esc") && setFilterOpened(false);
-      addEventListener("click", handleClickClose);
-      addEventListener("keydown", handleEscClose);
+      window.addEventListener("click", handleClickClose);
+      window.addEventListener("keydown", handleEscClose);
       return () => {
-        removeEventListener("click", handleClickClose);
-        removeEventListener("keydown", handleEscClose);
+        window.removeEventListener("click", handleClickClose);
+        window.removeEventListener("keydown", handleEscClose);
       };
     },
     [setFilterOpened]

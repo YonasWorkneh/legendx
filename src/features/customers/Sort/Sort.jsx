@@ -1,9 +1,8 @@
 import { HiArrowsUpDown } from "react-icons/hi2";
 import styles from "./Sort.module.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useAppContext } from "../../../contexts/AppContext";
 import { useForm } from "react-hook-form";
-import { useMutation } from "@tanstack/react-query";
 import { useCustomers } from "../useCustomers";
 import { getTimeStamp } from "../../../utils/date";
 
@@ -59,11 +58,11 @@ function Sort({ disabled, sortOpened, setSortOpened, setFilterOpened }) {
         !e.target.closest(".sort") && setSortOpened(false);
       const handleEscClose = (e) =>
         e.key.toLowerCase().includes("esc") && setSortOpened(false);
-      addEventListener("click", handleClickClose);
-      addEventListener("keydown", handleEscClose);
+      window.addEventListener("click", handleClickClose);
+      window.addEventListener("keydown", handleEscClose);
       return () => {
-        removeEventListener("click", handleClickClose);
-        removeEventListener("keydown", handleEscClose);
+        window.removeEventListener("click", handleClickClose);
+        window.removeEventListener("keydown", handleEscClose);
       };
     },
     [setSortOpened]

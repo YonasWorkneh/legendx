@@ -8,11 +8,11 @@ function Notifications({ onCloseNotification }) {
         !e.target.closest(".ntf-bar") && onCloseNotification(false);
       const handleEscClose = (e) =>
         e.key.toLowerCase().includes("esc") && onCloseNotification(false);
-      addEventListener("click", handleClickClose);
-      addEventListener("keydown", handleEscClose);
+      window.addEventListener("click", handleClickClose);
+      window.addEventListener("keydown", handleEscClose);
       return () => {
-        removeEventListener("click", handleClickClose);
-        removeEventListener("keydown", handleEscClose);
+        window.removeEventListener("click", handleClickClose);
+        window.removeEventListener("keydown", handleEscClose);
       };
     },
     [onCloseNotification]
