@@ -10,12 +10,12 @@ import Profile from "./features/customers/Profile/Profile";
 import Settings from "./pages/Settings";
 import Gym from "./features/Settings/gym/Gym";
 import ProfileSettings from "./features/Settings/profile/Profile";
-import Signup from "./pages/Signup";
+import Signup from "./pages/Signup.jsx";
 import { Toaster } from "react-hot-toast";
-import SignIn from "./pages/SignIn";
-import ProtectedRoute from "./features/Authentication/ProtectedRoute/ProtectedRoute";
-import PageNotFound from "./ui/PageNotFound/PageNotFound";
-import Equipments from "./pages/Equipments";
+import SignIn from "./pages/SignIn.jsx";
+import ProtectedRoute from "./features/Authentication/ProtectedRoute/ProtectedRoute.jsx";
+import PageNotFound from "./ui/PageNotFound/PageNotFound.jsx";
+import Equipments from "./pages/Equipments.jsx";
 import { useState } from "react";
 
 const queryClient = new QueryClient({
