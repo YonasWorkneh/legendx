@@ -1,0 +1,26 @@
+.hero {
+  background-color: var(--brand-color);
+  padding: 20px;
+  border-radius: 15px;
+  color: #d9d9d9d9;
+  width: 370px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  border: 1px solid var(--color-border);
+}
+:global(:root.dark) .hero {
+  background-color: transparent;
+}
+.main {
+  font-size: 1.8rem;
+}
+.middle {
+  font-size: 10rem;
+  text-align: center;
+}
+.date {
+  font-size: 1.2rem;
+}

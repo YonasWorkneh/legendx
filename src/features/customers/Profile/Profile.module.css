@@ -1,0 +1,145 @@
+.form {
+  width: 100%;
+  /* position: relative; */
+}
+.h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 650px;
+  position: relative;
+}
+.user {
+  text-align: center;
+}
+.left,
+.right {
+  padding: 1rem;
+}
+.left {
+  /* background-color: #d9d9d9; */
+  background-color: #cececeb8;
+  border-radius: 10px 0 0 10px;
+  display: grid;
+  place-items: center;
+}
+.left .imgFile {
+  position: relative;
+  width: fit-content;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgFile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.imgFile label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: var(--brand-color);
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  cursor: pointer;
+}
+.name {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.right {
+  background-color: #7a7a7a3b;
+  border-radius: 0px 10px 10px 0px;
+}
+.h2 {
+  text-align: center;
+  margin: 4rem 0 2rem;
+}
+h3 {
+  font-size: 3rem;
+}
+.divide {
+  width: 50%;
+  height: 1px;
+  background-color: #0000002c;
+}
+.btns {
+  margin: 5 auto 0;
+  display: flex;
+  gap: 4rem;
+}
+.btn {
+  padding: 0.5rem 2rem;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #0000005c;
+  border-radius: 5px;
+}
+.discard:hover {
+  border-color: var(--brand-color);
+}
+.save {
+  border: none;
+  background-color: var(--brand-color);
+  color: #fff;
+}
+.save:hover {
+  background-color: #15151de6;
+}
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  gap: 2rem;
+}
+.deleteBtn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* dark-mode */
+
+:global(:root.dark) .left {
+  border: 1px solid #222;
+  border-right: none;
+  background-color: transparent;
+  color: #d9d9d9;
+}
+
+:global(:root.dark) .left .btn {
+  background-color: transparent;
+  border: 1px solid #222;
+  box-shadow: 0px 0px 5px #333;
+}
+:global(:root.dark) .left .btn.save {
+  background-color: #111;
+}
+:global(:root.dark) .left .btn:hover {
+  box-shadow: 0px 0px 5px #666;
+}
+
+:global(:root.dark) .right {
+  background-color: #000;
+  border: 1px solid #222;
+}
+
+:global(:root.dark) .divide {
+  background-color: #222;
+}

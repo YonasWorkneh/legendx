@@ -1,0 +1,80 @@
+.notifications::before {
+  content: "";
+  position: absolute;
+  right: 2rem;
+  top: -0.6rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  transform: rotate(45deg);
+  border-top: 1px solid #2222222d;
+  border-left: 1px solid #2222222d;
+}
+.notifications {
+  position: absolute;
+  top: 3.6rem;
+  right: -1rem;
+  background-color: #ffff;
+  border-radius: 0.8rem;
+  border: 1px solid #2222222d;
+  width: 300px;
+  animation: fadein 0.4s ease-in-out;
+  z-index: 100000;
+}
+.notifications li {
+  padding: 1rem 2rem;
+  border-top: 1px solid #2222222a;
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  align-items: center;
+  gap: 1rem;
+  font-size: smaller;
+}
+.notifications li .icon {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: #fa797947;
+}
+.notifications li .icon svg {
+  color: rgba(218, 2, 2, 0.635);
+  font-size: 1.8rem;
+}
+
+.notifications .title {
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  font-weight: 600;
+}
+.notifications .user {
+  font-weight: bold;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+/* dark-mode */
+:global(:root.dark) {
+  .notifications {
+    background-color: #000;
+    border-color: #222;
+  }
+  .notifications li {
+    border-top-color: #222222f3;
+  }
+  .notifications li .icon {
+    background-color: rgb(237, 162, 162);
+  }
+  .notifications::before {
+    background-color: #000;
+    border-color: #222;
+  }
+}

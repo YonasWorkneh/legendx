@@ -1,0 +1,53 @@
+.user {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #d8d8d8fa;
+  font-weight: 500;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+}
+:global(:root.dark) .user {
+  background-color: transparent;
+  color: #d9d9d9;
+}
+.user:hover {
+  background-color: #cacacab8;
+}
+.itallic {
+  font-style: italic;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-transform: capitalize;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.status {
+  padding: 0.5rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 80px;
+  font-size: 1.4rem;
+}
+.true {
+  background-color: #73dfa791;
+}
+.false {
+  background-color: #eb5143ba;
+}
+/* dark-mode */
+
+:global(:root.dark) .user {
+  background-color: #111;
+}
+:global(:root.dark) .user:hover {
+  background-color: #3333339c;
+}

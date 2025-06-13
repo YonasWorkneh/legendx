@@ -1,0 +1,28 @@
+.customers {
+  margin-top: 3rem;
+}
+.customers li {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 130px 230px 160px 320px 150px 80px 80px 80px 100px;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: var(--color-grey-700);
+}
+.headerRow {
+  padding-left: 1rem;
+  color: #fff;
+}
+.headerRow span {
+  font-weight: 600;
+}
+.profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}

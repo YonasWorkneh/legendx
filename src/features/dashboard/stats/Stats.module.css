@@ -1,0 +1,11 @@
+.stats {
+  display: flex;
+  gap: 2rem;
+}
+.first {
+  width: 370px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

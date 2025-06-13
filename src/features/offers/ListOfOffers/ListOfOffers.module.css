@@ -1,0 +1,7 @@
+.offers {
+  display: flex;
+  gap: 8rem;
+  margin-top: 20rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

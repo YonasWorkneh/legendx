@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.3s, border 0.3s;
+}
+:root {
+  /* Grey */
+  --color-app: #2f292924;
+  --color-grey-0: #fff;
+  --color-grey-50: #f9fafb;
+  --color-grey-100: #f3f4f6;
+  --color-grey-200: #e5e7eb;
+  --color-grey-300: #d1d5db;
+  --color-grey-400: #9ca3af;
+  --color-grey-500: #6b7280;
+  --color-grey-600: #4b5563;
+  --color-grey-700: #374151;
+  --color-grey-800: #222;
+  --color-grey-900: #000;
+  --color-box: #f2f2f2;
+  --color-star: #ffffff26;
+  --color-border: transparent;
+  --link-active: #f3f4f6;
+
+  /* wavy-mask */
+  --mask: radial-gradient(
+        31.15px at 50% calc(100% + 25.5px),
+        #0000 calc(99% - 1px),
+        #000 calc(101% - 1px) 99%,
+        #0000 101%
+      )
+      calc(50% - 34px) calc(50% - 9px + 0.5px) / 68px 18px repeat-x,
+    radial-gradient(
+        31.15px at 50% -25.5px,
+        #0000 calc(99% - 1px),
+        #000 calc(101% - 1px) 99%,
+        #0000 101%
+      )
+      50% calc(50% + 9px) / 68px 18px repeat-x;
+
+  /* brand color */
+  --brand-color: #15151d;
+  --brand-color-light: #15151d3a;
+  --brand-color-x-light: #15151d2d;
+
+  /* Main backround */
+  --main-bg: url(/src/assets/bg3.jpg);
+
+  /* blur */
+  --blur-light: blur(10px);
+  /* 
+DARK_MODE
+  app{
+    background: #000;
+  }
+  .sidebar,.header{
+    background: #111;
+  }
+  .everything{
+    background:none;
+    border:1px solid #222;
+  }
+  .hover{
+    background: #222 variant of this;
+  }
+*/
+}
+:root.dark {
+  --color-app: #000;
+  --color-grey-0: #000;
+  --color-grey-50: #222;
+  --color-grey-100: #1f2937;
+  --color-grey-200: #374151;
+  --color-grey-300: #4b5563;
+  --color-grey-400: #6b7280;
+  --color-grey-500: #9ca3af;
+  --color-grey-600: #d1d5db;
+  --color-grey-700: #d9d9d9;
+  --color-grey-800: #f3f4f6;
+  --color-grey-900: #f9fafb;
+  --link-active: linear-gradient(100deg, #11111159, #33333373);
+  --color-box: #000;
+  --color-border: #222;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-grey-700);
+  transition: color 0.3s, background-color 0.3s;
+  height: 100vh;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
+
+select:disabled,
+input:disabled {
+  background-color: var(--color-grey-100);
+  color: var(--color-grey-500);
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-brand-600);
+  outline-offset: -1px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,79 @@
+.offer {
+  position: relative;
+  min-width: 300px;
+  min-height: 300px;
+  background-color: #d9d9d95d;
+  border-radius: 1rem;
+  padding: 10rem 0 2rem 0;
+  border: 1px solid var(--brand-color);
+  font-weight: 500;
+}
+:root.dark .offer {
+  border-color: var(--color-border);
+}
+
+.type {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.per {
+  font-size: 1.4rem;
+}
+.price,
+.transparent,
+.discount {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.discount {
+  text-decoration: line-through;
+}
+.img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -120px;
+  left: 0;
+}
+.athlete .img img {
+  width: 250px;
+}
+.img img {
+  width: 180px;
+  height: 200px;
+  object-position: center;
+}
+.services {
+  margin-left: 4rem;
+  margin-top: -1rem;
+}
+.service {
+  list-style-type: disc;
+  text-transform: capitalize;
+}
+
+.pro {
+  transform: translateY(-5rem);
+  background-color: var(--brand-color);
+  border-color: #d9d9d9d9;
+  color: #d9d9d9;
+}
+.transparent {
+  opacity: 0;
+}
+
+/* dark-mode */
+
+:global(:root.dark) .offer {
+  background-color: #000;
+  border-color: #222;
+  color: #d9d9d9;
+}
+
+:global(:root.dark) .pro {
+  background-color: #111;
+}

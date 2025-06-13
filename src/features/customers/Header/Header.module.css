@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.date {
+  background-color: var(--brand-color);
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  color: #fff;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+}
+.manip {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn {
+  background-color: var(--brand-color);
+  display: flex;
+  align-items: center;
+  border: none;
+  gap: 0.5rem;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+.btn:hover {
+  background-color: #15151de6;
+}
+
+/* dark-mode */
+:global(:root.dark) .date,
+:global(:root.dark) .btn {
+  background-color: #111;
+  border: 1px solid #222;
+  box-shadow: 0px 0px 5px #333;
+}
+:global(:root.dark) .btn:hover {
+  box-shadow: 0px 0px 5px #555;
+}

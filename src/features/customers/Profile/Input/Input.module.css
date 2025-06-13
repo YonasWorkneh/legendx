@@ -1,0 +1,50 @@
+.input {
+  position: relative;
+}
+.input label {
+  display: flex;
+  align-items: center;
+  color: #00000093;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.input input,
+.input select {
+  background-color: #d9d9d9b7;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  width: 100%;
+  /* text-transform: capitalize; */
+}
+/* .input:has(.icon) input{
+    padding-left: 4rem;
+} */
+.input input:focus {
+  border-color: var(--brand-color);
+}
+.none {
+  display: none;
+}
+.icon {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+}
+.icon svg {
+  font-size: 2rem;
+}
+.input input:disabled {
+  background-color: initial;
+}
+:global(:root.dark) .input input {
+  background-color: #000;
+  border-color: #222;
+  box-shadow: 0px 0px 5px #333;
+}
+:global(:root.dark) .input input:focus {
+  background-color: #111;
+  box-shadow: 0px 0px 5px #555;
+}

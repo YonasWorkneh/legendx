@@ -1,0 +1,9 @@
+.app {
+  display: grid;
+  grid-template-columns: 40rem 1fr;
+  grid-template-rows: auto 1fr;
+  background: var(--color-app);
+  backdrop-filter: blur(5px);
+  height: 100dvh;
+  padding: 20px;
+}

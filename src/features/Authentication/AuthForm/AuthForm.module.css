@@ -1,0 +1,153 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  height: 100dvh;
+  border-radius: 1rem;
+  border-radius: 1rem;
+}
+.container form {
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container form h1 {
+  text-align: center;
+}
+.banner {
+  /* https://www.danishthetechie.com/images/gym/about.png*/
+  background: url(/src/assets/gym.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.content {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  background: #000000a1;
+  color: #fff;
+  padding: 3rem 2rem;
+}
+.content svg {
+  font-size: 5rem;
+  margin-right: 2rem;
+}
+.logo {
+  font-size: 4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn {
+  color: var(--color-grey-0);
+  background-color: var(--brand-color);
+  border: none;
+  border-radius: 20rem;
+  padding: 0.5rem 3rem;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn div {
+  margin: 0 !important;
+}
+.btn:hover {
+  background: #15151de6;
+}
+.container label {
+  /* font-size: 1.4rem; */
+  display: block;
+  font-weight: 500;
+}
+.container form h1 {
+  margin: 5rem 0;
+  font-size: 4rem;
+}
+
+.container form div {
+  margin-bottom: 1rem;
+  width: 400px;
+}
+.container form div input {
+  width: 100%;
+  border-radius: 2rem;
+  border: 1px solid #ddd;
+  padding: 0.5rem 2rem;
+  margin-top: 0.5rem;
+}
+
+.container form div input:focus {
+  border-color: var(--brand-color);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 3rem 0 1rem;
+}
+.check label,
+.check input {
+  width: fit-content;
+  height: fit-content;
+}
+.container form .check input {
+  accent-color: var(--brand-color);
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: initial;
+}
+.relative {
+  position: relative;
+}
+.relative svg {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.error {
+  color: rgb(248, 53, 53);
+  margin-top: -5px;
+}
+.errInput {
+  border-color: rgb(245, 115, 115) !important;
+}
+
+:global(:root.dark) {
+  .container {
+    background-color: #111;
+    color: #fff;
+  }
+  .container form div input {
+    background: none;
+    border: 1px solid #333;
+  }
+  .container .btn {
+    background-color: #000;
+    border-color: #222;
+    box-shadow: 0px 0px 5px #444;
+    color: #fff;
+  }
+  .container .btn:hover {
+    /* background-color: #111; */
+    box-shadow: 0px 0px 5px #666;
+  }
+  .container .errInput {
+    border-color: rgba(255, 0, 0, 0.536) !important;
+  }
+  .container .error {
+    color: rgba(250, 64, 64, 0.792);
+  }
+}

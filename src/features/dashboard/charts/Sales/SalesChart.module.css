@@ -1,0 +1,55 @@
+.chart {
+  width: 60%;
+  max-height: 470px;
+  padding: 2rem 2rem 4rem;
+  background-color: var(--color-box);
+  border-radius: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+.chart p span {
+  font-weight: 700;
+}
+.icon {
+  font-size: 2.5rem;
+}
+.header,
+.header div {
+  display: flex;
+}
+.header {
+  justify-content: space-between;
+}
+.header div {
+  gap: 3rem;
+}
+.header p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.rev {
+  background-color: var(--brand-color);
+}
+
+.exp {
+  background-color: rgba(243, 119, 119, 0.991);
+}
+.mt2 {
+  margin-top: 2rem;
+}
+
+:global(:root.dark) {
+  .rev {
+    background-color: #d9d9d9b6;
+  }
+  .chart p {
+    color: #d9d9d9;
+  }
+}

@@ -1,0 +1,67 @@
+.modal {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00000067;
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  position: relative;
+}
+
+.modal video {
+  border-radius: 20px;
+  height: 800px;
+}
+.btns {
+  position: relative;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+.btns button,
+.modal button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: rgb(249, 76, 76);
+  margin-right: 2rem;
+  border: none;
+}
+.modal .close {
+  background: none;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.modal .close:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.btns button svg,
+.modal button svg {
+  color: var(--color-grey-0);
+  font-size: 2.5rem;
+}
+:global(:root.dark) .modal button {
+  background-color: rgb(249, 49, 49);
+  color: #d9d9d9;
+}
+:global(:root.dark) .close {
+  background: none !important;
+  border-color: #c4c3c39b;
+}
+:global(:root.dark) .modal svg {
+  color: #d9d9d9;
+}

@@ -1,0 +1,273 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.144);
+  backdrop-filter: blur(2px);
+}
+.wrapper {
+  background: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 60%;
+  min-width: 50rem;
+  max-height: 900vh;
+  overflow: auto;
+  border-radius: 1rem;
+}
+
+.modalContainer {
+  background-color: #15151d44;
+  backdrop-filter: blur(5px);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  position: relative;
+  padding: 2rem;
+}
+.modalContainer svg {
+  font-size: 2rem;
+  color: #00000068;
+}
+.modalContainer svg:hover {
+  color: #15151d;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #15151d27;
+}
+
+.modalHeader h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.modalContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 3rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .modalContent {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="tel"],
+.formGroup input[type="date"],
+.formGroup input[type="number"],
+.formGroup select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  background-color: #d9d9d982;
+  border-radius: 0.25rem;
+}
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: var(--brand-color);
+}
+.formGroup .radioItem label {
+  margin: initial;
+}
+.radioGroup {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.radioGroup,
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radioItem,
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.radioItem input {
+  accent-color: var(--brand-color);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  border-top: 1px solid #15151d27;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: white;
+  margin-right: 2rem;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.secondary {
+  border: 1px solid var(--brand-color);
+  color: #15151d;
+}
+
+.btn.primary {
+  background-color: var(--brand-color);
+  border: none;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+.image {
+  border: 1px dashed var(--brand-color);
+  width: 160px;
+  height: 160px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.image svg {
+  cursor: pointer;
+}
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center;
+}
+.errMess {
+  color: rgba(255, 0, 0, 0.847);
+}
+.btn div {
+  margin: none !important;
+}
+/* dark-mode */
+:global(:root.dark) .modalHeader,
+:global(:root.dark) .modalFooter {
+  border-color: #222222c2;
+}
+
+:global(:root.dark) .modalContainer {
+  background-color: #000;
+  border: 1px solid #222;
+  color: #d9d9d9;
+}
+:global(:root.dark) .modalContainer input,
+:global(:root.dark) .modalContainer select {
+  background-color: #000;
+  border: 1px solid #222;
+  box-shadow: 0px 0px 5px #333;
+}
+:global(:root.dark) .modalContainer input[type="radio"] {
+  accent-color: #222;
+}
+:global(:root.dark) .modalContainer .image {
+  border-color: #d9d9d971;
+  color: #d9d9d9;
+}
+:global(:root.dark) .modalContainer .image svg {
+  color: #d9d9d9;
+}
+:global(:root.dark) .modalContainer .btn {
+  background-color: transparent;
+  border: 1px solid #222;
+  box-shadow: 0px 0px 5px #444;
+  color: #d9d9d9fa;
+}
+
+:global(:root.dark) .modalContainer .btn.primary {
+  background-color: #111;
+}
+:global(:root.dark) .modalContainer .btn:hover {
+  box-shadow: 0px 0px 5px #666;
+}
+:global(:root.dark) .modalContainer .btn.primary:hover {
+  background-color: #22222293;
+}
+:global(:root.dark) .errMess {
+  color: rgba(251, 91, 91, 0.701);
+}
+.imgSelectBox {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+.imgSelectBox button {
+  font-size: 12px;
+  background-color: var(--brand-color);
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: none;
+}
+:global(:root.dark) .imgSelectBox button {
+  background-color: #111;
+  border: 1px solid #333;
+}
+.imgUpdate {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--brand-color);
+  border: 1px solid #ffffff;
+}
+.imgUpdate svg {
+  color: #fff;
+  font-size: 14px;
+}
+.imgUpdate svg:hover {
+  color: #fff;
+}

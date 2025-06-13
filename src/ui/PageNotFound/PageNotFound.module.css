@@ -1,0 +1,44 @@
+.container {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20rem;
+}
+.container h1 {
+  font-size: 10rem;
+  margin: 2rem 0;
+}
+.container h2 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: -30px;
+  font-size: 13rem;
+}
+.btn {
+  background-color: var(--brand-color);
+  border-radius: 20rem;
+  padding: 3px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-grey-0);
+  gap: 10px;
+  margin-top: 2rem;
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.5);
+  border: none;
+}
+.btn:hover {
+  background: #15151de6;
+  /* box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.5); */
+}
