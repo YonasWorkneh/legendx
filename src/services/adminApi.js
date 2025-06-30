@@ -1,5 +1,4 @@
 const baseUrl = import.meta.env.VITE_BASE_URL;
-console.log(baseUrl);
 
 export const createAdminApi = async (data) => {
   try {

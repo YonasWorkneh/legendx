@@ -1,17 +1,15 @@
-import { MdFileDownload } from "react-icons/md";
 import styles from "./Advert.module.css";
+import { Link } from "react-router-dom";
 function Advert() {
   return (
     <div className={styles.container}>
-      <div className={styles.add}></div>
-      <div className={styles.content}>
-        <h1>Download Mobile App</h1>
-        <p>Manage your gym whenever whereever you are.</p>
-        <button className={styles.btn}>
-          <span>Download Now</span>
-          <MdFileDownload />
-        </button>
-      </div>
+      <p>Coming Soon</p>
+      <Link to="/">
+        <img src={"/img/app-store.svg"} alt="app-store" />
+      </Link>
+      <Link to="/">
+        <img src={"/img/play-store.svg"} alt="play-store" />
+      </Link>
     </div>
   );
 }

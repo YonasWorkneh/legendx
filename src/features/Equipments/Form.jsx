@@ -1,16 +1,16 @@
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import styles from "./Form.module.css";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createEquipment, updateEquipment } from "../../services/equipmentApi";
 import toast from "react-hot-toast";
 import { MdClose } from "react-icons/md";
 import Loader from "../../ui/Loader/Loader";
-import { act, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { HiPencil, HiPlus } from "react-icons/hi2";
 import { useAppContext } from "../../contexts/AppContext";
 function Form({ onClose, activeEquipment }) {
-  const { handleSubmit, register, reset, formState } = useForm();
-  const { errors } = formState;
+  const { handleSubmit, register, reset } = useForm();
+  // const { errors } = formState;
   const queryClient = useQueryClient();
   const [isUploading, setIsUploading] = useState(false);
   const [isProccessing, setIsProccessing] = useState(false);
