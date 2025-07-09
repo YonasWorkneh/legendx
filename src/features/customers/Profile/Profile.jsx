@@ -15,7 +15,7 @@ import { deleteUser, updateUser } from "../../../services/userApi";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import Loader from "../../../ui/Loader/Loader";
-import { useOffers } from "../../Offers/useOffers";
+import useOffers from "../../offers/useOffers";
 
 function Profile() {
   const { customerId: id } = useParams();

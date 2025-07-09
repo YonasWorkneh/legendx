@@ -1,7 +1,7 @@
 import Error from "../../../ui/Error/Error";
 import Pagination from "../../../ui/Pagination/Pagination";
 import OfferCard from "../OfferCard/OfferCard";
-import { useOffers } from "../useOffers";
+import useOffers from "../useOffers";
 import styles from "./ListOfOffers.module.css";
 
 function ListOfOffers() {

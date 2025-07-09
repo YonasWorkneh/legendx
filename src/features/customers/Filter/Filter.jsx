@@ -2,7 +2,7 @@ import { BsSliders } from "react-icons/bs";
 import styles from "./Filter.module.css";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useOffers } from "../../Offers/useOffers";
+import useOffers from "../../offers/useOffers";
 import { useCustomers } from "../useCustomers";
 import { useAppContext } from "../../../contexts/AppContext";
 

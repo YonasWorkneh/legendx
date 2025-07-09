@@ -2,13 +2,11 @@ import { useEffect, useState } from "react";
 import styles from "./Gym.module.css";
 import { HiMinus, HiPlus } from "react-icons/hi";
 import OfferForm from "./OfferForm/OfferForm";
-import { useOffers } from "../../Offers/useOffers";
-import { useForm } from "react-hook-form";
+import useOffers from "../../offers/useOffers";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { deleteSetting, setSetting } from "../../../services/settingsApi";
 import toast from "react-hot-toast";
 import { useSettings } from "../useSettings";
-// import { useMutation } from "@tanstack/react-query";
 
 function Gym({ space = 100 }) {
   const { settings } = useSettings();

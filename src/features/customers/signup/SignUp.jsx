@@ -8,7 +8,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createUser } from "../../../services/userAPI";
 import toast from "react-hot-toast";
 import Loader from "../../../ui/Loader/Loader";
-import { useOffers } from "../../Offers/useOffers";
+import  useOffers  from "../../offers/useOffers";
 import Camera from "../../../ui/Camera/Camera";
 
 export default function SignUp() {

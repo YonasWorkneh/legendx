@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { formatDate } from "../../../utils/date";
 import styles from "./Customer.module.css";
-import { useOffers } from "../../Offers/useOffers";
+import useOffers from "../../offers/useOffers";
 import { useAppContext } from "../../../contexts/AppContext";
 
 function Customer({ customer }) {

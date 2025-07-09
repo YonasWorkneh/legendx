@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getOffers } from "../../services/offerApi";
 
-function useOffers() {
+export default function useOffers() {
   const {
     data: offers = [],
     isLoading: isLoadingOffers,
@@ -14,5 +14,3 @@ function useOffers() {
 
   return { offers, isLoadingOffers, error };
 }
-
-export { useOffers };
