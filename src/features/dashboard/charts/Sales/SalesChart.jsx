@@ -1,4 +1,3 @@
-import { CiCircleAlert } from "react-icons/ci";
 import styles from "./SalesChart.module.css";
 import { MdOutlineQueryStats } from "react-icons/md";
 import AreaChart from "./AreaChart";
@@ -25,9 +24,5 @@ function SalesChart() {
     </div>
   );
 }
-const returnLastTwoDigit = (n) => {
-  let num = Math.pow(5, n);
-  while (num.toLocaleString().length > 2) num /= 10;
-};
 
 export default SalesChart;

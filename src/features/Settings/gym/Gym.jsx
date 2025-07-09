@@ -8,7 +8,7 @@ import { deleteSetting, setSetting } from "../../../services/settingsApi";
 import toast from "react-hot-toast";
 import { useSettings } from "../useSettings";
 
-function Gym({ space = 100 }) {
+function Gym() {
   const { settings } = useSettings();
 
   const [availSpace, setAvailSpace] = useState(null);
