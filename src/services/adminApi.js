@@ -1,17 +1,19 @@
 const baseUrl = import.meta.env.VITE_BASE_URL;
 
 export const createAdminApi = async (data) => {
+  const gymId =
+    localStorage.getItem("gym-id") || sessionStorage.getItem("temp-auth-token");
   try {
     const res = await fetch(`${baseUrl}/auth/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({ ...data, gymId }),
     });
     if (res.status !== 200) throw new Error();
-    const { admin } = await res.json();
-    return admin;
+    const result = await res.json();
+    return result;
   } catch (err) {
     console.log(err.message);
     throw err;
@@ -27,9 +29,6 @@ export const logInAdminApi = async (data) => {
     body: JSON.stringify(data),
   });
   const result = await res.json();
-  console.log(result);
-  const { admin } = result;
-  if (!admin) throw new Error(result.message);
   return result;
 };
 

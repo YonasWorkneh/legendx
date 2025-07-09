@@ -21,8 +21,8 @@ const getEquipments = async () => {
       throw new Error("Error fetching equipments");
     }
     const data = await response.json();
-    const { equipments } = data;
-    return equipments.reverse();
+    console.log(data);
+    return data?.reverse();
   } catch (err) {
     console.error(err.message);
     return [];

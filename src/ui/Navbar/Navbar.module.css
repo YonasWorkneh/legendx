@@ -33,6 +33,7 @@
 :global(:root.dark .active),
 :global(:root.dark) .link:hover {
   border-left-color: #d9d9d9ca;
+  background: #1f293796;
 }
 :global(:root.dark) .link {
   color: #d9d9d9;

@@ -192,8 +192,13 @@ export default function SignUp() {
                       type="number"
                       name=""
                       id="age"
-                      {...register("age")}
+                      {...register("age", {
+                        required: "Required *",
+                      })}
                     />
+                    {errors?.age && (
+                      <p className={styles.errMess}>{errors.age.message}</p>
+                    )}
                   </div>
                   {/* fitness goal */}
                   <div className={styles.formGroup}>

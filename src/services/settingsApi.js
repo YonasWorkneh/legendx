@@ -5,7 +5,6 @@ const setSetting = async ({ key, value }) => {
     const gymId =
       localStorage.getItem("gym-id") ||
       sessionStorage.getItem("temp-auth-token");
-    console.log(gymId);
     const res = await fetch(`${url}/setting/create`, {
       method: "POST",
       body: JSON.stringify({ key, value, gymId }),

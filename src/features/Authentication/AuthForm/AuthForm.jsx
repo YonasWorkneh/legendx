@@ -28,9 +28,9 @@ function AuthForm({ type }) {
   const { mutate } = useMutation({
     mutationFn: type === "signup" ? createAdminApi : logInAdminApi,
     onSuccess: (data) => {
-      console.log(data);
       const { admin } = data;
-      const { gymId } = admin;
+      console.log(admin); 
+      const gymId = admin.gymId;
       toast.success(
         type === "signup"
           ? "Account created successfully!"

@@ -5,7 +5,7 @@ import { MdOutlineQueryStats } from "react-icons/md";
 // import { SiTrainerroad } from "react-icons/si";
 import { CgGym } from "react-icons/cg";
 import { IoAnalytics, IoPeople } from "react-icons/io5";
-import { FaGear } from "react-icons/fa6";
+import { FaGear, FaUserLock } from "react-icons/fa6";
 // import { HiInboxStack } from "react-icons/h/i2";
 import { BsStack } from "react-icons/bs";
 import { SiGoogleanalytics, SiTrainerroad } from "react-icons/si";
@@ -53,8 +53,8 @@ function Navbar() {
         </li>
         <li>
           <NavLink to="signup" className={` ${styles.link}`}>
-            <LuLogIn className={styles.icon} />
-            <span>Signup</span>
+            <FaUserLock className={styles.icon} />
+            <span>Create Admin</span>
           </NavLink>
         </li>
       </ul>

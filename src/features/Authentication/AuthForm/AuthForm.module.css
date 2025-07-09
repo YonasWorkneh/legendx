@@ -17,7 +17,7 @@
 }
 .banner {
   /* https://www.danishthetechie.com/images/gym/about.png*/
-  background: url(/src/assets/gym.jpeg);
+  background: url(/public/img/bg.jpeg);
   background-size: cover;
   background-position: center;
   height: 100%;
