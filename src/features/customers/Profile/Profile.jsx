@@ -11,7 +11,7 @@ import { HiTrash } from "react-icons/hi";
 import Confirm from "../../../ui/Confirmation/Confirm";
 import { useCustomers } from "../useCustomers";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { deleteUser, updateUser } from "../../../services/userAPI";
+import { deleteUser, updateUser } from "../../../services/userApi";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import Loader from "../../../ui/Loader/Loader";
