@@ -1,5 +1,5 @@
 import { AiOutlineRise } from "react-icons/ai";
-import styles from "./hero.module.css";
+import styles from "./Hero.module.css";
 import Star from "./Star";
 import { formatDate } from "../../../utils/date";
 import { useEffect, useState } from "react";
