@@ -1,4 +1,4 @@
-import ListOfOffers from "../features/Offers/ListOfOffers/ListOfOffers";
+import ListOfOffers from "../features/offers/ListOfOffers/ListOfOffers";
 
 function Offers() {
   const h1Styles = {
