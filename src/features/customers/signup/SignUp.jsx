@@ -5,7 +5,7 @@ import { CgClose } from "react-icons/cg";
 import { HiPencil } from "react-icons/hi";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { createUser } from "../../../services/userAPI";
+import { createUser } from "../../../services/userApi";
 import toast from "react-hot-toast";
 import Loader from "../../../ui/Loader/Loader";
 import  useOffers  from "../../offers/useOffers";
