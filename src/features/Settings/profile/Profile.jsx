@@ -98,7 +98,9 @@ function ProfileSettings() {
                     src={
                       selectedImg
                         ? selectedImg
-                        : `http://localhost:8000/${admin.imgUrl}`
+                        : `${import.meta.env.VITE_BASE_URL}/admins/${
+                            admin.imgUrl
+                          }`
                     }
                     alt="profile-img"
                   />

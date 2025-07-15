@@ -19,7 +19,10 @@ function OfferCard({ offer }) {
       } `}
     >
       <div className={styles.img}>
-        <img src={`http://localhost:8000/${offerImg}`} alt="gym-athlete" />
+        <img
+          src={`${import.meta.env.VITE_BASE_URL}/offers/${offerImg}`}
+          alt="gym-athlete"
+        />
       </div>
       <p className={styles.type}>{title}</p>
       <p className={`${styles.discount} ${base ? "" : styles.transparent}`}>

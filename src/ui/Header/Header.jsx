@@ -42,7 +42,10 @@ function Header() {
             navigate(`/${admin.gymId}/settings/profile`);
           }}
         >
-          <img src={`http://localhost:8000/${imgUrl}`} alt="admin-avatar" />
+          <img
+            src={`${import.meta.env.VITE_BASE_URL}/admins/${imgUrl}`}
+            alt="admin-avatar"
+          />
         </div>
         <div className={`center ${styles.icons}`}>
           <div className={`${styles.wrapper} ntf-bar`}>

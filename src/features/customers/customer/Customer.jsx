@@ -28,7 +28,10 @@ function Customer({ customer }) {
       <li className={styles.user}>
         <span className={styles.itallic}>#{id}</span>
         <div className={styles.profile}>
-          <img src={`http://localhost:8000/${imgUrl}`} alt="user-img" />
+          <img
+            src={`${import.meta.env.VITE_BASE_URL}/users/${imgUrl}`}
+            alt="user-img"
+          />
           <span>{name}</span>
         </div>
         <span>{phone}</span>

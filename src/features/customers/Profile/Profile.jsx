@@ -155,7 +155,9 @@ function Profile() {
               <Loader />
             ) : (
               <img
-                src={src ? src : `http://localhost:8000/${imgUrl}`}
+                src={
+                  src ? src : `${import.meta.env.VITE_API_URL}/users/${imgUrl}`
+                }
                 alt="user-img"
               />
             )}

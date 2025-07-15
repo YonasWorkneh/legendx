@@ -4,7 +4,10 @@ function Equipment({ equipment, onEdit, onDelete }) {
   const { name, quantity, imgUrl } = equipment;
   return (
     <div className={styles.equip}>
-      <img src={`http://localhost:8000/${imgUrl}`} alt={`${name}-img`} />
+      <img
+        src={`${import.meta.env.VITE_BASE_URL}/equipments/${imgUrl}`}
+        alt={`${name}-img`}
+      />
       <p className={styles.title}>{name}</p>
       <p className={styles.quan}>{quantity}</p>
       <div className={styles.actions}>

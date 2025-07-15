@@ -16,7 +16,9 @@ function Form({ onClose, activeEquipment }) {
   const [isProccessing, setIsProccessing] = useState(false);
   const { equipmentId: id } = activeEquipment;
   const [src, setSrc] = useState(
-    id ? `http://localhost:8000/${activeEquipment.imgUrl}` : ""
+    id
+      ? `${import.meta.env.VITE_BASE_URL}/equipments/${activeEquipment.imgUrl}`
+      : ""
   );
   const [image, setImage] = useState(null);
   const fileInputRef = useRef();
