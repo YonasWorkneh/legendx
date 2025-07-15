@@ -191,7 +191,7 @@ function OfferForm({ formId, offer }) {
             <img
               src={
                 getValues("id")
-                  ? `${import.meta.env.VITE_BASE_URL}/offers/${selectedImg}`
+                  ? `${import.meta.env.VITE_BASE_URL}/${selectedImg}`
                   : selectedImg
               }
               alt={`Selected for ${formId}`}

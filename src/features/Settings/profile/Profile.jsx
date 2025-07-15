@@ -98,7 +98,7 @@ function ProfileSettings() {
                     src={
                       selectedImg
                         ? selectedImg
-                        : `${import.meta.env.VITE_BASE_URL}/admins/${
+                        : `${import.meta.env.VITE_BASE_URL}/${
                             admin.imgUrl
                           }`
                     }

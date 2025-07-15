@@ -20,7 +20,7 @@ function OfferCard({ offer }) {
     >
       <div className={styles.img}>
         <img
-          src={`${import.meta.env.VITE_BASE_URL}/offers/${offerImg}`}
+          src={`${import.meta.env.VITE_BASE_URL}/${offerImg}`}
           alt="gym-athlete"
         />
       </div>

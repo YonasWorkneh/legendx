@@ -5,7 +5,7 @@ function Equipment({ equipment, onEdit, onDelete }) {
   return (
     <div className={styles.equip}>
       <img
-        src={`${import.meta.env.VITE_BASE_URL}/equipments/${imgUrl}`}
+        src={`${import.meta.env.VITE_BASE_URL}/${imgUrl}`}
         alt={`${name}-img`}
       />
       <p className={styles.title}>{name}</p>

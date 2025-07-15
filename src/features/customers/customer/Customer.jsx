@@ -29,7 +29,7 @@ function Customer({ customer }) {
         <span className={styles.itallic}>#{id}</span>
         <div className={styles.profile}>
           <img
-            src={`${import.meta.env.VITE_BASE_URL}/users/${imgUrl}`}
+            src={`${import.meta.env.VITE_BASE_URL}/${imgUrl}`}
             alt="user-img"
           />
           <span>{name}</span>

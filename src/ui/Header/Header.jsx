@@ -43,7 +43,7 @@ function Header() {
           }}
         >
           <img
-            src={`${import.meta.env.VITE_BASE_URL}/admins/${imgUrl}`}
+            src={`${import.meta.env.VITE_BASE_URL}/${imgUrl}`}
             alt="admin-avatar"
           />
         </div>
